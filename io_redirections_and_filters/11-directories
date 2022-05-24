@@ -1,2 +1,2 @@
 #!/bin/bash
-tree -d > num_lines | wc -l < num_lines
+ls -lRa | grep "^d" | wc -l
