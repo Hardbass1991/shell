@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This scripts prints "Best School" ten times
+
+i="10"
+
+while [ $i -gt 0 ]; do
+echo "Best School"
+i=$((i-1))
+done
