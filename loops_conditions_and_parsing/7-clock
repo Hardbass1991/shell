@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script prints sequences of numbers from 1 to 59, after each of which adds a number from 1 to 12, in that order.
+
+i=0
+while [ $i -le 12 ]; do
+	echo $"Hour: ${i}"
+	j=1
+	while [ $j -lt 60 ] && [ $i -lt 12 ]; do
+		echo $j
+		((j++))
+	done
+	((i++))
+done
