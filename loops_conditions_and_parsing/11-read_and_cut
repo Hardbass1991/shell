@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script prints every line of /etc/passwd, but only keeping fields 1, 3, and 6, i. e. username, user id, and home directory
+
+IFS=$'\n'
+ACCOUNTS=($(cat /etc/passwd))
+
+n=${#ACCOUNTS[@]}
+i=0
+while [ $i -lt $n ]; do
+	echo "$i ${ACCOUNTS[$i]}"
+	IFS=":"
+	echo "${ACCOUNTS[$i]}" | (read -r v1 v2 v3 v4 v5 v6 v7; echo "$v1:$v3:$v6")	
+	((i++))
+done
