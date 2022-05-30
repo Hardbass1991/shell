@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This scripts prints ls, but only showing the part of the names after the first "-"
+
+LIST="$(ls test)"
+
+for i in $LIST; do
+	echo "$i" | cut -d "-" -f 2
+done
