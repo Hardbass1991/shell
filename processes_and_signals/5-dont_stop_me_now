@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # This script kills a running process
 
-id=$(pidof 4-to_infinity_and_beyond)
-
-kill -9 "$id"
+kill -9 $$
