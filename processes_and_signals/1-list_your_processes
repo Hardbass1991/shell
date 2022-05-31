@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This scripts prints all the processes currently running that don't have a controlling tty
+
+ps -auH
