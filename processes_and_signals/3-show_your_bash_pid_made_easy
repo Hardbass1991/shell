@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script prints a list of the names and ids of the currently running processes whose name includes the word 'bash'
+# shellcheck disable=SC2012
+
+ls -l /proc/*/exe | cut -d ' ' -f 9,11 | cut -d '/' -f 3,7 | grep bash | sort -n | tr '/' ' '
