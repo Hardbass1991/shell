@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This scripts prints all the processes currently running that don't have a controlling tty
+# shellcheck disable=SC2009
+
+ps aux --forest | grep bash
