@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script counts gives a ranking of the most common combinations of IP address and HTTP status code, using data from a log file.
+
+awk '{print $1 " " $9}' apache-access.log | sort -d | uniq -c | sort -nr
