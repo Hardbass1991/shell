@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This scripts kills an ongoing process by name, without using the command 'kill'
 
-sudo pkill -f 7-highlander
+pkill -f 7-highlander
 
