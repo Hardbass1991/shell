@@ -11,7 +11,7 @@ function delete_pid_file() {
 	exit
 }
 
-trap delete_pid_file SIGQUIT
+trap delete_pid_file SIGQUIT SIGTERM
 
 while true; do
 	echo "To infinity and beyond"
