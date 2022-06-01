@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # This scripts kills an ongoing process by name, without using the command 'kill'
 
-sudo pkill -f 6-stop_me_if_you_can
+sudo pkill -f 4-to_infinity_and_beyond
+
