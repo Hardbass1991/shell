@@ -2,7 +2,7 @@
 # This (init) script manages the script 'manage_my_process', stating the commands to execute when starting, stopping and restarting said program
 
 start() {
-	./manage_my_process
+	sh /shell/processes_and_signals/manage_my_process
 	pgrep manage_my_process > /var/run/my_process.pid
 	echo "manage_my_process started"
 }
@@ -25,6 +25,6 @@ restart() {
 case "$1" in
 	start) start ;;
 	stop) stop ;;
-	restart) ;;
+	restart) restart ;;
 	*) echo 'Usage: manage_my_process {start|stop|restart}' ;;
 esac
