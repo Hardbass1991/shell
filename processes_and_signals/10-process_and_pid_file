@@ -5,10 +5,9 @@ trap "echo Y U no love me?!" SIGINT
 
 echo $$ > /var/run/myscript.pid
 
-PID=$$
 function exit_sigquit() {
 	rm /var/run/myscript.pid
-	kill "$PID"
+	exit 1
 }
 
 function exit_sigterm() {
