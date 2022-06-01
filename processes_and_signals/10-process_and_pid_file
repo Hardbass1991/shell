@@ -2,6 +2,8 @@
 # This script prints a string indefinitely and reacts to SIGTERM and SIGINT by printing more text
 
 trap "echo Y U no love me?!" SIGINT
+trap exit_sigquit SIGQUIT
+trap exit_sigterm SIGTERM
 
 echo $$ > /var/run/myscript.pid
 
@@ -16,8 +18,6 @@ function exit_sigquit() {
 	exit 1
 }
 
-trap exit_sigterm SIGTERM
-trap exit_sigquit SIGQUIT
 
 while true; do
 	echo "To infinity and beyond"
