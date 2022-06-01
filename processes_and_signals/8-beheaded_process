@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This scripts kills an ongoing process by name, without using the command 'kill'
 
-kill -9 -1
+killall -9 7-highlander
 
