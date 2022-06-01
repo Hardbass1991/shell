@@ -8,12 +8,12 @@ echo $$ > /var/run/myscript.pid
 function exit_sigterm() {
 	echo "I hate the kill command"
 	rm /var/run/myscript.pid
-	exit
+	exit 1
 }
 
 function exit_sigquit() {
 	rm /var/run/myscript.pid
-	exit
+	exit 1
 }
 
 trap exit_sigterm SIGTERM
