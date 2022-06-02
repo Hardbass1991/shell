@@ -24,7 +24,9 @@ restart() {
 
 case "$1" in
 	start) start ;;
-	stop) stop ;;
+	stop) stop		
+	rm -f /var/run/my_process.pid 
+		;;
 	restart) restart ;;
 	*) echo 'Usage: manage_my_process {start|stop|restart}' ;;
 esac
