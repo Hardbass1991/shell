@@ -8,8 +8,8 @@ start() {
 }
 
 stop() {
-	sudo pkill -f manage_my_process
-	rm -f /var/run/my_process.pid
+	sudo pkill -f manage_my_process &
+	rm -f /var/run/my_process.pid &
 	printf '%s' 'manage_my_process stopped '
 }
 
