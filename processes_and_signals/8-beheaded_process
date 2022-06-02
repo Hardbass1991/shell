@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This scripts kills an ongoing process by name, without using the command 'kill'
 
-pgrep 7-highlander | xargs kill -9
+pkill -f 7-highlander
 
