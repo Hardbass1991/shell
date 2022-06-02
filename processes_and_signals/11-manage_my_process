@@ -9,14 +9,14 @@ start() {
 
 stop() {
 	sudo pkill -f manage_my_process &
-	sudo rm -f /var/run/my_process.pid &
+	rm -f /var/run/my_process.pid &
 	printf '%s\n' 'manage_my_process stopped'
 
 }
 
 restart() {	
 	sudo pkill -f manage_my_process &
-	sudo rm -f /var/run/my_process.pid 
+	sudo rm -f /var/run/my_process.pid & 
 	bash manage_my_process &
 	pgrep manage_my_process > /var/run/my_process.pid
 	printf '%s\n' 'manage_my_process restarted'
